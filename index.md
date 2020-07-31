@@ -1,6 +1,6 @@
-->Mary Carrigan<-
+# Mary Carrigan
 ==============
 
 ***
 
-![The Oval at CSU](/the_oval.jpg)
+![The Oval at CSU](/the_oval.JPG)
