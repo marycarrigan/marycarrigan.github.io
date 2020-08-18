@@ -23,6 +23,34 @@
     <p>Student at Colorado State University</p>
     </div>
 
+    <script>
+      var flag = "right";
+      window.setInterval(
+            function() {
+              var dino = document.getElementById("dino");
+              var temp = parseInt(dino.style.left, 10)
+              var width = window.innerWidth - 75;
+              if(flag=="right"){
+                  if(temp <= width){
+                  dino.style.left = temp + 10 + "px"
+                  }
+                  else{
+                      flag="left";
+                      dino.setAttribute("class", "to-left");
+                  }
+              }else{
+                  if(temp>=0){
+                  dino.style.left = temp - 10 + "px"
+                  }
+                  else{
+                      flag="right";
+                      dino.setAttribute("class", "etc");
+                  }
+              }
+              }, 300);
+      </script>
+
+
 
   <nav class="navbar navbar-expand navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -60,7 +88,7 @@
 </div>
 
 <!-- Modal markup: https://getbootstrap.com/docs/4.4/components/modal/ -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -71,7 +99,7 @@
       <div class="modal-body">
 
       <!-- Carousel markup: https://getbootstrap.com/docs/4.4/components/carousel/ -->
-      <div id="carouselExample" class="carousel slide" data-ride="carousel">
+      <div id="carouselPhoto" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="the_oval.JPG">
@@ -86,11 +114,11 @@
               <img class="d-block w-100" src="bridge.JPG">
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselPhoto" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselPhoto" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
@@ -103,6 +131,8 @@
     </div>
   </div>
 </div>
+
+<div class="footer"><img id="dino" src="dino.gif" style="position: relative; width:75px; height:50px; bottom: 0; float:left; left:0"></div>
 
 </body>
 </html>
