@@ -8,6 +8,8 @@
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+<link rel = "stylesheet" href= "indexStyle.css">
+
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -21,36 +23,7 @@
   <div class="jumbotron bg-dark text-white">
     <h1>Mary Carrigan</h1>
     <p>Student at Colorado State University</p>
-    </div>
-
-    <script>
-      var flag = "right";
-      window.setInterval(
-            function() {
-              var dino = document.getElementById("dino");
-              var temp = parseInt(dino.style.left, 10)
-              var width = window.innerWidth - 75;
-              if(flag=="right"){
-                  if(temp <= width){
-                  dino.style.left = temp + 10 + "px"
-                  }
-                  else{
-                      flag="left";
-                      dino.setAttribute("class", "to-left");
-                  }
-              }else{
-                  if(temp>=0){
-                  dino.style.left = temp - 10 + "px"
-                  }
-                  else{
-                      flag="right";
-                      dino.setAttribute("class", "etc");
-                  }
-              }
-              }, 300);
-      </script>
-
-
+  </div>
 
   <nav class="navbar navbar-expand navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -132,7 +105,34 @@
   </div>
 </div>
 
-<div class="footer"><img id="dino" src="dino.gif" style="position: relative; width:75px; height:50px; bottom: 0; float:left; left:0"></div>
+<script>
+  var flag = "right";
+  window.setInterval(
+        function() {
+          var dino = document.getElementById("dino");
+          var temp = parseInt(dino.style.left, 10)
+          var width = window.innerWidth - 75;
+          if(flag=="right"){
+              if(temp <= width){
+              dino.style.left = temp + 10 + "px"
+              }
+              else{
+                  flag="left";
+                  dino.setAttribute("class", "to-left");
+              }
+          }else{
+              if(temp>=0){
+              dino.style.left = temp - 10 + "px"
+              }
+              else{
+                  flag="right";
+                  dino.setAttribute("class", "etc");
+              }
+          }
+          }, 300);
+  </script>
+
+<div class="footer"><img id="dino" src="dinosaur.gif" style="position: relative; width:75px; height:50px; bottom: 0; float:left; left:0"></div>
 
 </body>
 </html>
